@@ -52,7 +52,6 @@ function ContactForm({
         lg:p-8
       "
     >
-
       {/* Success Message */}
 
       {submitted && (
@@ -78,15 +77,10 @@ function ContactForm({
             text-emerald-700
           "
         >
-          <CheckCircle2
-            size={18}
-            className="mt-0.5 shrink-0"
-          />
+          <CheckCircle2 size={18} className="mt-0.5 shrink-0" />
 
           <div>
-            <p className="text-sm font-semibold">
-              Message sent successfully!
-            </p>
+            <p className="text-sm font-semibold">Message sent successfully!</p>
 
             <p className="mt-1 text-xs text-emerald-600">
               Thank you for contacting Construction Mirror.
@@ -95,11 +89,9 @@ function ContactForm({
         </motion.div>
       )}
 
-
       {/* Heading */}
 
       <div className="mb-5">
-
         <p
           className="
             text-[10px]
@@ -134,13 +126,10 @@ function ContactForm({
             text-slate-500
           "
         >
-          Have a business enquiry, advertising requirement,
-          editorial request or partnership opportunity?
-          Send us a message.
+          Have a business enquiry, advertising requirement, editorial request or
+          partnership opportunity? Send us a message.
         </p>
-
       </div>
-
 
       {/* Form */}
 
@@ -151,11 +140,9 @@ function ContactForm({
         animate="show"
         className="space-y-4"
       >
-
         {/* Name */}
 
         <motion.div variants={fadeUp}>
-
           <label
             htmlFor="firstName"
             className="
@@ -172,9 +159,7 @@ function ContactForm({
           </label>
 
           <div className="grid gap-3 sm:grid-cols-2">
-
             <div>
-
               <input
                 id="firstName"
                 name="firstName"
@@ -202,16 +187,9 @@ function ContactForm({
                   focus:ring-[#0F8B9D]/10
                 "
               />
-
-              <span className="mt-1 block text-[9px] text-slate-400">
-                First
-              </span>
-
             </div>
 
-
             <div>
-
               <input
                 id="lastName"
                 name="lastName"
@@ -238,22 +216,13 @@ function ContactForm({
                   focus:ring-[#0F8B9D]/10
                 "
               />
-
-              <span className="mt-1 block text-[9px] text-slate-400">
-                Last
-              </span>
-
             </div>
-
           </div>
-
         </motion.div>
-
 
         {/* Email */}
 
         <motion.div variants={fadeUp}>
-
           <label
             htmlFor="email"
             className="
@@ -296,14 +265,11 @@ function ContactForm({
               focus:ring-[#0F8B9D]/10
             "
           />
-
         </motion.div>
-
 
         {/* Message */}
 
         <motion.div variants={fadeUp}>
-
           <label
             htmlFor="message"
             className="
@@ -347,16 +313,19 @@ function ContactForm({
               focus:ring-[#0F8B9D]/10
             "
           />
-
         </motion.div>
 
-{/* Submit */}
 
-<motion.div variants={fadeUp}>
-  <button
-    type="submit"
-    disabled={submitting}
-    className="
+
+        
+
+        {/* Submit */}
+
+        <motion.div variants={fadeUp}>
+          <button
+            type="submit"
+            disabled={submitting}
+            className="
       group
       inline-flex
       h-11
@@ -378,24 +347,25 @@ function ContactForm({
       disabled:cursor-not-allowed
       disabled:opacity-60
     "
-  >
-    {submitting ? "Sending..." : "Send Message"}
+          >
+            {submitting ? "Sending..." : "Send Message"}
 
-    {!submitting && (
-      <Send
-        size={15}
-        className="
+            {!submitting && (
+              <Send
+                size={15}
+                className="
           transition-transform
           duration-300
           group-hover:translate-x-1
         "
-      />
-    )}
-  </button>
-</motion.div>
+              />
+            )}
+          </button>
+        </motion.div>
+
+
 
       </motion.form>
-
     </motion.div>
   );
 }

@@ -2,8 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 
-import CommentSection from "../../components/CommentSection";
-import { getNewsBySlug, getRelatedNews } from "../../services/NewsApi";
+import CommentSection from "../../components/common/CommentSection";
+import {
+  getNewsBySlug,
+  getRelatedNews,
+} from "../../services/articleApi";
 import { normalizeNews } from "../../utils/newsFormat";
 
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { getInternationalNews } from "../../services/NewsApi";
+import { getInternationalNews } from "../../services/internationalNewsApi";
 import { normalizeNews } from "../../utils/newsFormat";
 
 /* =========================================================

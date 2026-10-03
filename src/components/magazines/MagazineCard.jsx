@@ -13,7 +13,7 @@ const cardAnimation = {
   },
 };
 
-function MagazineCard({ magazine }) {
+function MagazineCard({ magazine, compact = false }) {
   return (
     <motion.article
       variants={cardAnimation}
@@ -33,13 +33,21 @@ function MagazineCard({ magazine }) {
       {/* MAGAZINE COVER */}
       <div className="relative overflow-hidden bg-[#0A1128] p-4">
         <div className="relative overflow-hidden rounded-lg">
-          <iframe
-            src={`${magazine.link.split("#")[0]}#p=1`}
-            title={magazine.title}
-            className="aspect-[3/4] w-full border-0"
-            loading="lazy"
-          />
-        </div>
+  {compact ? (
+    <img
+      src={magazine.cover}
+      alt={magazine.title}
+      className="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+  ) : (
+    <iframe
+      src={`${magazine.link.split("#")[0]}#p=1`}
+      title={magazine.title}
+      className="aspect-[3/4] w-full border-0"
+      loading="lazy"
+    />
+  )}
+</div>
       </div>
 
       {/* CONTENT */}
