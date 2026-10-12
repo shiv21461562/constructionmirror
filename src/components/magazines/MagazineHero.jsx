@@ -35,8 +35,6 @@ const fadeRight = {
 function MagazineHero() {
   return (
     <section className="relative overflow-hidden bg-[#F7F8FA]">
- 
-
       <div
         className="
           pointer-events-none absolute
@@ -48,11 +46,8 @@ function MagazineHero() {
         "
       />
 
- 
-
       <div className="relative mx-auto max-w-[1240px] px-5 sm:px-8">
         <div className="grid min-h-[470px] items-center gap-12 py-16 lg:grid-cols-[1fr_auto] lg:py-20">
-
           {/* LEFT CONTENT */}
           <div>
             {/* Editorial Label */}
@@ -80,11 +75,11 @@ function MagazineHero() {
               </span>
             </motion.div>
 
-           <motion.h1
-  variants={fadeUp}
-  initial="hidden"
-  animate="visible"
-  className="
+            <motion.h1
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="
     max-w-[800px]
     font-serif
     text-[38px]
@@ -95,12 +90,12 @@ function MagazineHero() {
     sm:text-[48px]
     lg:text-[60px]
   "
->
-  Our{" "}
-  <span className="relative inline-block text-[#C99A3B]">
-    Magazines
-    <span
-      className="
+            >
+              Our{" "}
+              <span className="relative inline-block text-[#C99A3B]">
+                Magazines
+                <span
+                  className="
         absolute -bottom-2 left-1/2
         h-[3px] w-12
         -translate-x-1/2
@@ -108,9 +103,9 @@ function MagazineHero() {
         bg-[#C99A3B]
         sm:-bottom-3
       "
-    />
-  </span>
-</motion.h1>
+                />
+              </span>
+            </motion.h1>
 
             {/* Description */}
             <motion.p
@@ -129,9 +124,9 @@ function MagazineHero() {
               <span className="font-semibold text-[#0A1128]">
                 Construction Mirror
               </span>{" "}
-              — bringing together industry news, expert interviews,
-              project developments, technology and insights from
-              India&apos;s construction and infrastructure sector.
+              — bringing together industry news, expert interviews, project
+              developments, technology and insights from India&apos;s
+              construction and infrastructure sector.
             </motion.p>
 
             {/* Bottom Meta */}
@@ -222,10 +217,7 @@ function MagazineHero() {
                       2026 Edition
                     </span>
 
-                    <Sparkles
-                      size={15}
-                      className="text-[#C99A3B]"
-                    />
+                    <Sparkles size={15} className="text-[#C99A3B]" />
                   </div>
                 </div>
               </div>
@@ -266,10 +258,7 @@ function MagazineHero() {
               Explore Editions
             </span>
 
-            <ArrowDown
-              size={13}
-              className="animate-bounce text-[#C99A3B]"
-            />
+            <ArrowDown size={13} className="animate-bounce text-[#C99A3B]" />
           </div>
         </motion.div>
       </div>

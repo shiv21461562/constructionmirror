@@ -77,11 +77,6 @@
 
 import ads from "../../data/ads";
 
-/*
-  Use: <AdStrip name="afterNational" />
-  Kaunsi ad dikhegi ye src/data/ads.js se aata hai.
-*/
-
 function AdStrip({ name }) {
   const list = (ads[name] || []).filter((ad) => ad.active);
 

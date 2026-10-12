@@ -119,6 +119,12 @@ import GalleryPage from "./pages/gallery/GalleryPage";
 import Advertise from "./pages/advertise/Advertise";
 import Subscription from "./pages/subscription/Subscription";
 
+
+
+import TermsConditions from "./components/TermsConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+
+
 function App() {
   return (
     <div className="min-h-screen bg-white">
@@ -239,12 +245,25 @@ function App() {
 <Route
   path="/subscription"
   element={<Subscription />}
+  
+/>
+
+<Route
+  path="/terms"
+  element={<TermsConditions />}
+/>
+
+<Route
+  path="/privacy-policy"
+  element={<PrivacyPolicy />}
 />
 
         </Routes>
       </main>
 
       {/* ================= FOOTER ================= */}
+
+
       <Footer />
 
     </div>

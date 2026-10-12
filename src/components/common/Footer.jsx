@@ -478,13 +478,13 @@ function Footer() {
           </p>
 
           <div className="flex items-center justify-center gap-6">
-            <FooterLink to="/terms">
-              Terms & Conditions
-            </FooterLink>
+          <FooterLink to="/terms">
+  Terms & Conditions
+</FooterLink>
 
-            <FooterLink to="/privacy-policy">
-              Privacy Policy
-            </FooterLink>
+<FooterLink to="/privacy-policy">
+  Privacy Policy
+</FooterLink>
           </div>
         </div>
       </div>

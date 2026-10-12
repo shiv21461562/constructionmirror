@@ -20,28 +20,78 @@
 
 const ads = {
   header: [
-    { image: "/banner/GS-caltex.webp", link: "https://example.com", alt: "GS Caltex", active: true },
-    { image: "/banner/GS-caltex.webp", link: "/contact", alt: "Advertise with us", active: true },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "https://example.com",
+      alt: "GS Caltex",
+      active: true,
+    },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "/contact",
+      alt: "Advertise with us",
+      active: true,
+    },
   ],
 
   afterNational: [
-   { image: "/banner/GS-caltex.webp", link: "https://example.com", alt: "GS Caltex", active: true },
-    { image: "/banner/GS-caltex.webp", link: "/contact", alt: "Advertise with us", active: true },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "https://example.com",
+      alt: "GS Caltex",
+      active: true,
+    },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "/contact",
+      alt: "Advertise with us",
+      active: true,
+    },
   ],
 
   afterInterviews: [
-    { image: "/banner/GS-caltex.webp", link: "https://example.com", alt: "GS Caltex", active: true },
-    { image: "/banner/GS-caltex.webp", link: "/contact", alt: "Advertise with us", active: true },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "https://example.com",
+      alt: "GS Caltex",
+      active: true,
+    },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "/contact",
+      alt: "Advertise with us",
+      active: true,
+    },
   ],
 
   afterExclusive: [
-  { image: "/banner/GS-caltex.webp", link: "https://example.com", alt: "GS Caltex", active: true },
-    { image: "/banner/GS-caltex.webp", link: "/contact", alt: "Advertise with us", active: true },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "https://example.com",
+      alt: "GS Caltex",
+      active: true,
+    },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "/contact",
+      alt: "Advertise with us",
+      active: true,
+    },
   ],
 
   afterCoverStory: [
- { image: "/banner/GS-caltex.webp", link: "https://example.com", alt: "GS Caltex", active: true },
-    { image: "/banner/GS-caltex.webp", link: "/contact", alt: "Advertise with us", active: true },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "https://example.com",
+      alt: "GS Caltex",
+      active: true,
+    },
+    {
+      image: "/banner/GS-caltex.webp",
+      link: "/contact",
+      alt: "Advertise with us",
+      active: true,
+    },
   ],
 };
 
