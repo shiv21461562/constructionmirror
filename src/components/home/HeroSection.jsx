@@ -260,11 +260,8 @@ function HeroSection() {
           ref={imageRef}
           src="/hero/hero-bg.png"
           alt="Construction Industry"
-      className="hero-image h-full w-full object-cover"
+          className="hero-image h-full w-full object-cover"
         />
-
-
-
 
         {/* Main Hero Video */}
         {/* <video
@@ -277,10 +274,6 @@ function HeroSection() {
         >
           <source src="/hero/videos/hero.mp4" type="video/mp4" />
         </video>  */}
-
-
-
-
 
         {/* LEFT SIDE ONLY - White Fade */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-white via-white/95 to-transparent" />
@@ -318,15 +311,15 @@ function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h2
+          <p
             className="hero-in text-[2rem] font-bold leading-[1.08] tracking-tight text-[#0A1322] sm:text-3xl lg:text-4xl xl:text-5xl"
             style={{ animationDelay: "120ms" }}
           >
             Building the Future of
-            <span className="block bg-gradient-to-r from-[#B8862C] via-[#C99A3B] to-[#D9B45E] bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#B8862C] via-[#C99A3B] to-[#D9B45E] bg-clip-text font-bold text-transparent">
               Construction Industry.
             </span>
-          </h2>
+          </p>
 
           {/* Description */}
           <p

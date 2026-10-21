@@ -107,8 +107,8 @@ function AboutHero() {
 
           {/* Intro */}
 
-          <div
-            className="
+         <div
+  className="
     mt-6
     max-w-xl
     text-sm
@@ -116,34 +116,28 @@ function AboutHero() {
     text-slate-600
     sm:text-base
   "
-          >
-            <p>
-              <strong className="font-bold text-[#C99A3B]">
-                CONSTRUCTION MIRROR
-              </strong>{" "}
-              – An Outlook of the Construction Equipment & Infrastructure
-              Industry – is a monthly magazine that delivers expert insights
-              into India’s construction and infrastructure sector. Each issue
-              features interviews with top executives from successful companies,
-              where they share best practices, industry experiences, and views
-              on current challenges and trends.
-            </p>
+>
+  <p>
+    <strong className="font-bold text-[#C99A3B]">
+      CONSTRUCTION MIRROR
+    </strong>{" "}
+    is a monthly magazine covering India’s construction equipment
+    and infrastructure industry, featuring expert insights,
+    industry leaders, interviews, and emerging trends.
+  </p>
 
-            <p className="mt-5">
-              We cover a wide range of topics, including engineering and
-              technology, project funding, labour challenges, legal liabilities,
-              industry regulations, and environmental impact. Our goal is to
-              reflect the evolving landscape of the construction ecosystem.
-            </p>
+  <p className="mt-5">
+    We explore engineering, technology, project financing,
+    regulations, and sustainability to highlight key industry
+    developments and challenges.
+  </p>
 
-            <p className="mt-5">
-              Our readers are key decision-makers in the construction equipment
-              and infrastructure space. This includes project procurement
-              managers, purchase heads, consultants, contractors, senior
-              executives, and both public and private project owners and
-              regulators.
-            </p>
-          </div>
+  <p className="mt-5">
+    Our readership includes industry leaders, procurement
+    managers, consultants, contractors, project owners, and
+    infrastructure decision-makers.
+  </p>
+</div>
 
           {/* Button */}
 

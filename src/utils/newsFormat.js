@@ -1,15 +1,12 @@
-/*
-  NEWS FORMAT HELPERS
-  Backend ke field names alag hon to sirf normalizeNews() badalna hai.
-*/
-
 const IMAGE_BASE = import.meta.env.VITE_IMAGE_URL || "";
 
-export function formatDate(value, withTime = false) {
+export function formatDate(value) {
   if (!value) return "";
-  const opts = { month: "short", day: "2-digit", year: "numeric" };
-  if (withTime) Object.assign(opts, { hour: "2-digit", minute: "2-digit" });
-  return new Date(value).toLocaleString("en-US", opts);
+  return new Date(value).toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
 }
 
 export function formatViews(n = 0) {
@@ -21,30 +18,22 @@ export function resolveImage(src) {
   return src.startsWith("http") ? src : `${IMAGE_BASE}${src}`;
 }
 
-function estimateReadTime(content) {
-  const text = Array.isArray(content)
-    ? content.join(" ")
-    : String(content || "").replace(/<[^>]+>/g, " ");
-  const words = text.split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.ceil(words / 200));
-}
-
 export function normalizeNews(n) {
   const id = n._id || n.id;
-  const content = n.content || n.body || n.description || "";
+  const slug = n.slug || id;               // slug nahi mila to id fallback
 
   return {
     id,
-    slug: n.slug || id,
+    slug,
     category: n.category?.name || n.category || "News",
     title: n.title,
-    excerpt: n.excerpt || n.summary || "",
-    content,
-    author: n.author?.name || n.author || "Construction Mirror Bureau",
-    readTime: n.readTime || estimateReadTime(content),
+    excerpt: n.excerpt || n.description || n.summary || "",
+    content: n.content || n.body || "",
+    author: n.author?.name || n.author || "Construction Mirror",
+    readTime: n.readTime || 3,
     date: formatDate(n.publishedAt || n.createdAt || n.date),
     views: formatViews(n.views ?? n.viewCount ?? 0),
     image: resolveImage(n.image || n.thumbnail || n.featuredImage),
-    link: `/news/${n.slug || id}`,
+    link: `/news/${slug}`,                 // sab jagah same link format
   };
 }

@@ -1,6 +1,5 @@
-import InterviewSection from "../interview/InterviewSection";
-import ExclusiveInterviews from "./ExclusiveInterviews";
-
+import InterviewSection from "../../components/interview/InterviewSection";
+import ExclusiveInterviews from "../../components/home/ExclusiveInterviews";
 function Interview() {
   return (
     <main className="min-h-screen bg-white">

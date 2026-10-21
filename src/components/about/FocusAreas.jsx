@@ -101,7 +101,7 @@ function FocusAreas() {
             </span>
           </div>
 
-          <h2
+          <p
             className="
               mt-4
               font-serif
@@ -114,7 +114,7 @@ function FocusAreas() {
             "
           >
             Key Focus Areas
-          </h2>
+          </p>
 
           <p
             className="

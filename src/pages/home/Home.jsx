@@ -2,7 +2,7 @@ import HeroSection from "../../components/home/HeroSection";
 import AdStrip from "../../components/home/AdStrip";
 
 import LatestNews from "../../components/home/LatestNews";
-import National from "../../components/home/national";
+import National from "../../components/news/NationalNews";
 import FeaturedNews from "../../components/home/FeaturedNews";
 import GuestArticle from "../../components/home/GuestArticle";
 import CoverStory from "../../components/home/CoverStory";
