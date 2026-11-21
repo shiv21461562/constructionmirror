@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
+
+import AdStrip from "./AdStrip";
 import gsap from "gsap";
 
 /* Frosted white glass */
@@ -289,9 +291,16 @@ function HeroSection() {
       </div>
 
       {/* =========================================
+          AD STRIP (top of hero, below navbar)
+      ========================================== */}
+      <div className="relative z-10">
+        <AdStrip name="header" transparent />
+      </div>
+
+      {/* =========================================
           CONTENT
       ========================================== */}
-      <div className="relative mx-auto grid min-h-[640px] max-w-[1400px] items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[740px] lg:grid-cols-[1.3fr_0.7fr] lg:gap-16 lg:px-10">
+      <div className="relative mx-auto grid min-h-[560px] max-w-[1400px] items-center gap-12 px-5 py-10 sm:px-8 sm:py-12 lg:min-h-[640px] lg:grid-cols-[1.3fr_0.7fr] lg:gap-16 lg:px-10">
         {/* LEFT */}
         <div className="max-w-3xl sm:ml-2 lg:ml-10 xl:ml-24">
           {/* Badge */}
@@ -331,7 +340,6 @@ function HeroSection() {
             and infrastructure ecosystem.
           </p>
 
-          {/* Buttons */}
           {/* Buttons */}
           <div
             className="
@@ -383,6 +391,26 @@ function HeroSection() {
 }
 
 export default HeroSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // import { Link } from "react-router-dom";
 // import { useEffect, useRef } from "react";

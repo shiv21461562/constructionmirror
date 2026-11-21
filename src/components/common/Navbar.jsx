@@ -17,60 +17,69 @@ const navItems = [
   { name: "HOME", path: "/" },
   { name: "ABOUT", path: "/about" },
   { name: "MAGAZINES", path: "/magazines" },
-{
-  name: "NEWS",
-  path: "/news",
-  children: [
-    {
-      name: "National News",
-      path: "/news/national",
-    },
-    {
-      name: "International News",
-      path: "/news/international",
-    },
-  ],
-},
-  { name: "INTERVIEWS", path: "/interview" },
   {
-    name: "RESOURCES",
-    path: "/resources",
+    name: "NEWS",
+    path: "/news",
     children: [
-      { name: "Product Info", path: "/resources" },
-      { name: "Guest Article", path: "/resources/whitepapers" },
-      { name: "Quotes", path: "/resources/downloads" },
+      {
+        name: "National News",
+        path: "/news/national",
+      },
+      {
+        name: "International News",
+        path: "/news/international",
+      },
     ],
   },
+  { name: "INTERVIEWS", path: "/interview" },
 {
-  name: "MORE",
-  path: "#",
+  name: "RESOURCES",
+  path: "/resources",
   children: [
     {
-      name: "Cover Story",
-      path: "/cover-story",
+      name: "Product Info",
+      path: "/resources",
     },
     {
-      name: "Editorial Calendar",
-      path: "/editorial-calendar",
+      name: "Guest Article",
+      path: "/resources/guest-article",
     },
     {
-      name: "Event Calendar",
-      path: "/event-calendar",
-    },
-    {
-      name: "Gallery",
-      path: "/gallery",
-    },
-    {
-      name: "Advertise",
-      path: "/advertise",
-    },
-    {
-      name: "Subscription",
-      path: "/subscription",
+      name: "Quotes",
+      path: "/resources/quotes",
     },
   ],
 },
+  {
+    name: "MORE",
+    path: "#",
+    children: [
+      {
+        name: "Cover Story",
+        path: "/cover-story",
+      },
+      {
+        name: "Editorial Calendar",
+        path: "/editorial-calendar",
+      },
+      {
+        name: "Event Calendar",
+        path: "/event-calendar",
+      },
+      {
+        name: "Gallery",
+        path: "/gallery",
+      },
+      {
+        name: "Advertise",
+        path: "/advertise",
+      },
+      {
+        name: "Subscription",
+        path: "/subscription",
+      },
+    ],
+  },
 ];
 
 /* Right side ka button */
@@ -275,16 +284,16 @@ function Navbar() {
         {/* ============ RIGHT: CONTACT + MOBILE BUTTON ============ */}
         <div className="ml-auto flex items-center justify-end xl:ml-0 xl:flex-1">
           {/* Desktop CONTACT button */}
-<NavLink
-  to={contactItem.path}
-  className="group hidden xl:inline-flex items-center gap-3 rounded-full border border-[#D4AF5A]/80 bg-white/[0.06] px-5 py-2 text-[10px] font-bold tracking-[0.15em] text-[#E6C473] backdrop-blur-xl transition-all duration-500 hover:border-[#E6C473] hover:bg-white/[0.12] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_25px_-8px_rgba(212,175,90,0.65)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF5A]"
->
-  <span>{contactItem.name}</span>
+          <NavLink
+            to={contactItem.path}
+            className="group hidden xl:inline-flex items-center gap-3 rounded-full border border-[#D4AF5A]/80 bg-white/[0.06] px-5 py-2 text-[10px] font-bold tracking-[0.15em] text-[#E6C473] backdrop-blur-xl transition-all duration-500 hover:border-[#E6C473] hover:bg-white/[0.12] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_25px_-8px_rgba(212,175,90,0.65)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF5A]"
+          >
+            <span>{contactItem.name}</span>
 
-  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#E6C473]/70 bg-[#D4AF5A]/10 transition-all duration-500 group-hover:bg-[#D4AF5A]/20 group-hover:shadow-[0_0_12px_rgba(212,175,90,0.5)]">
-    <Arrow className="h-3 w-3 transition-transform duration-500 group-hover:translate-x-0.5" />
-  </span>
-</NavLink>
+            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#E6C473]/70 bg-[#D4AF5A]/10 transition-all duration-500 group-hover:bg-[#D4AF5A]/20 group-hover:shadow-[0_0_12px_rgba(212,175,90,0.5)]">
+              <Arrow className="h-3 w-3 transition-transform duration-500 group-hover:translate-x-0.5" />
+            </span>
+          </NavLink>
 
           {/* Mobile menu button */}
           <button
@@ -375,21 +384,20 @@ function Navbar() {
               );
             })}
 
-         
             {/* Mobile CONTACT button */}
-         {/* Mobile CONTACT button */}
-<NavLink
-  to={contactItem.path}
-  className={`group mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-[#D4AF5A] bg-gradient-to-r px-7 py-3.5 text-[11px] font-bold tracking-[0.16em] text-[#0A1322] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF5A] ${
-    contactActive
-      ? "from-[#D4AF5A] to-[#B8862C] shadow-[0_10px_28px_-6px_rgba(212,175,90,0.7)]"
-      : "from-[#E6C473] to-[#C99A3B] shadow-[0_8px_24px_-6px_rgba(212,175,90,0.6)] hover:from-[#D4AF5A] hover:to-[#B8862C] hover:shadow-[0_10px_28px_-6px_rgba(212,175,90,0.7)]"
-  }`}
->
-  <span>{contactItem.name}</span>
+            {/* Mobile CONTACT button */}
+            <NavLink
+              to={contactItem.path}
+              className={`group mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-[#D4AF5A] bg-gradient-to-r px-7 py-3.5 text-[11px] font-bold tracking-[0.16em] text-[#0A1322] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF5A] ${
+                contactActive
+                  ? "from-[#D4AF5A] to-[#B8862C] shadow-[0_10px_28px_-6px_rgba(212,175,90,0.7)]"
+                  : "from-[#E6C473] to-[#C99A3B] shadow-[0_8px_24px_-6px_rgba(212,175,90,0.6)] hover:from-[#D4AF5A] hover:to-[#B8862C] hover:shadow-[0_10px_28px_-6px_rgba(212,175,90,0.7)]"
+              }`}
+            >
+              <span>{contactItem.name}</span>
 
-  <Arrow className="transition-transform duration-300 group-hover:translate-x-1" />
-</NavLink>
+              <Arrow className="transition-transform duration-300 group-hover:translate-x-1" />
+            </NavLink>
           </div>
         </div>
       </div>

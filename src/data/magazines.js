@@ -30,4 +30,4 @@ const magazines = [
   },
 ];
 
-export default magazines;
+export default magazines;        

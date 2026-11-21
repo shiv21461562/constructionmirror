@@ -259,21 +259,25 @@ function Footer() {
                   rel="noopener noreferrer"
                   aria-label={social.label}
                   className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-white/10
-                    text-white/55
-                    transition-all
-                    duration-300
-                    hover:border-[#E6C36E]
-                    hover:bg-[#E6C36E]
-                    hover:text-[#081022]
-                  "
+  flex
+  h-10
+  w-10
+  items-center
+  justify-center
+  rounded-full
+  border
+  border-[#E6C36E]/40
+  bg-white/[0.04]
+  text-[#E6C36E]
+  transition-all
+  duration-300
+  hover:-translate-y-1
+  hover:border-[#E6C36E]
+  hover:bg-[#E6C36E]
+  hover:text-[#081022]
+  hover:shadow-[0_0_18px_rgba(230,195,110,0.25)]
+  active:scale-95
+"
                 >
                   <SocialIcon name={social.icon} />
                 </a>
@@ -314,9 +318,7 @@ function Footer() {
                 {columns[0].links.map((link) => (
                   <li key={link.label}>
                     <div className="flex justify-center lg:block">
-                      <FooterLink to={link.to}>
-                        {link.label}
-                      </FooterLink>
+                      <FooterLink to={link.to}>{link.label}</FooterLink>
                     </div>
                   </li>
                 ))}
@@ -341,9 +343,7 @@ function Footer() {
                 {columns[1].links.map((link) => (
                   <li key={link.label}>
                     <div className="flex justify-center lg:block">
-                      <FooterLink to={link.to}>
-                        {link.label}
-                      </FooterLink>
+                      <FooterLink to={link.to}>{link.label}</FooterLink>
                     </div>
                   </li>
                 ))}
@@ -449,6 +449,9 @@ function Footer() {
           </div>
         </div>
 
+
+        
+
         {/* =====================================================
             BOTTOM BAR
         ===================================================== */}
@@ -478,13 +481,9 @@ function Footer() {
           </p>
 
           <div className="flex items-center justify-center gap-6">
-          <FooterLink to="/terms">
-  Terms & Conditions
-</FooterLink>
+            <FooterLink to="/terms">Terms & Conditions</FooterLink>
 
-<FooterLink to="/privacy-policy">
-  Privacy Policy
-</FooterLink>
+            <FooterLink to="/privacy-policy">Privacy Policy</FooterLink>
           </div>
         </div>
       </div>

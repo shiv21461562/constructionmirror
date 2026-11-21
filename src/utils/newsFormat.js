@@ -36,4 +36,4 @@ export function normalizeNews(n) {
     image: resolveImage(n.image || n.thumbnail || n.featuredImage),
     link: `/news/${slug}`,                 // sab jagah same link format
   };
-}
+}                                                                                                                   

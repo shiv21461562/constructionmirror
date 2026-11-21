@@ -1,4 +1,4 @@
-// import ads from "../data/ads";
+// import ads from "../../data/ads";
 
 // /*
 //   Use: <AdStrip name="afterNational" />
@@ -75,32 +75,63 @@
 
 // export default AdStrip;
 
+
+
 import ads from "../../data/ads";
 
-function AdStrip({ name }) {
+/*
+  transparent = true  -> no dark band / border / blur (used inside HeroSection,
+                         banners float directly on the hero background)
+  transparent = false -> original dark glass strip (used everywhere else)
+*/
+function AdStrip({ name, transparent = false }) {
   const list = (ads[name] || []).filter((ad) => ad.active);
 
   if (list.length === 0) return null;
 
-  return (
-    <section
-      className="
+  const wrapperClass = transparent
+    ? "relative py-4 sm:py-5"
+    : `
         relative overflow-hidden
         border-y border-white/10
         bg-gradient-to-b from-[#0A1128]/80 via-[#0A1128]/70 to-[#070D1A]/85
         backdrop-blur-xl backdrop-saturate-150
         shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),inset_0_-1px_0_0_rgba(0,0,0,0.4)]
         py-6 sm:py-7
-      "
-    >
-      {/* soft glass glow */}
-      <div
-        aria-hidden="true"
-        className="
-          pointer-events-none absolute inset-0
-          bg-[radial-gradient(60%_120%_at_50%_0%,rgba(255,255,255,0.08),transparent_70%)]
-        "
-      />
+      `;
+
+  const cardClass = transparent
+    ? `
+        group relative mx-auto block w-full max-w-[560px]
+        overflow-hidden lg:max-w-none
+        bg-white
+        shadow-[0_10px_30px_-12px_rgba(10,19,34,0.35)]
+        ring-1 ring-slate-900/5
+        transition-all duration-500
+        hover:-translate-y-0.5
+      `
+    : `
+        group relative mx-auto block w-full max-w-[560px]
+        overflow-hidden lg:max-w-none
+        bg-[#070D1A]
+        shadow-[0_6px_18px_-10px_rgba(10,17,40,0.35)]
+        transition-all duration-500
+        hover:-translate-y-0.5
+        hover:border-[#0A1128]/40
+      `;
+
+  return (
+    <section className={wrapperClass}>
+      {/* soft glass glow (only on the dark strip) */}
+      {!transparent && (
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none absolute inset-0
+            bg-[radial-gradient(60%_120%_at_50%_0%,rgba(255,255,255,0.08),transparent_70%)]
+          "
+        />
+      )}
 
       <div className="relative mx-auto w-full max-w-[1000px] px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-8 sm:gap-7 lg:grid-cols-2">
@@ -110,16 +141,7 @@ function AdStrip({ name }) {
               href={ad.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                group relative mx-auto block w-full max-w-[560px]
-                overflow-hidden lg:max-w-none
-
-                bg-[#070D1A]
-                shadow-[0_6px_18px_-10px_rgba(10,17,40,0.35)]
-                transition-all duration-500
-                hover:-translate-y-0.5
-                hover:border-[#0A1128]/40
-              "
+              className={cardClass}
             >
               {/* Banner size unchanged */}
               <div className="relative aspect-[1600/250] w-full">
@@ -136,7 +158,7 @@ function AdStrip({ name }) {
                   className="
                     absolute bottom-0 left-0
                     h-[2px] w-0
-                    bg-[#0A1128]
+                    bg-[#C99A3B]
                     transition-all duration-700
                     group-hover:w-full
                   "
