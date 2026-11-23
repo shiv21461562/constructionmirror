@@ -30,7 +30,11 @@ import TermsConditions from "./pages/legal/TermsConditions";
 import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
 
 import BackToTop from "./components/common/BackToTop";
-import WhatsAppButton from "./components/common/WhatsAppButton";
+
+
+
+
+import AIChatbot from "./components/chatbot/AIChatbot";
 
 function NotFound() {
   return (
@@ -124,7 +128,7 @@ function App() {
 
       <BackToTop />
 
-      <WhatsAppButton />
+     <AIChatbot />
     </div>
   );
 }
